@@ -9,11 +9,13 @@ public class MemoryMemberRepository implements MemberRepository {
 
     @Override
     public void save(Member member) {
+
         store.put(member.getId(), member);  // 아이디 save
     }
 
     @Override
     public Member findById(Long memberId) {  // 아이디 찾기
+
         return store.get(memberId);
     }
 }
