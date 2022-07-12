@@ -9,8 +9,9 @@ import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
 
 public class OrderApp {
-
     public static void main(String[] args) {
+
+        AppConfig appConfig = new AppConfig(); // 의존관계 주입, 인터펭스에만 의존
         MemberService memberService = new MemberServiceImpl();
         OrderService orderService = new OrderServiceImpl();
 
